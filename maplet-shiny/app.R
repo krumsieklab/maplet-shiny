@@ -1,16 +1,16 @@
-#### Initialize ----
-library(maplet)
-library(tidyverse)
 
 ######################    Maplet   #########################
 #          Jinfeng Lu, Xiang Zhu, Yifan Wu                 #
 #                                                          #
 ############################################################
 
-
 ########################################################################## 
 ########################   Data Exploration  #############################
 ########################################################################## 
+
+#### Initialize ----
+library(maplet)
+library(tidyverse)
 
 #### Loading and preprocessing ----
 file_data <- system.file("extdata", "example_data/simulated_data.xlsx", package = "maplet")
@@ -434,6 +434,7 @@ compute_data <- function(updateProgress = NULL) {
 ######################## build the Shiny App #############################
 ##########################################################################
 
+
 # Define UI for application
 ui <- fluidPage(
     theme = "bootstrap.css",
@@ -455,7 +456,7 @@ ui <- fluidPage(
         title = div(img(src='logo.png',
                         style="float:left; margin-top: -10px; padding-right:10px;padding-bottom:10px",
                         height = 60),
-                    "Krumsiek Lab: Maplet Shiny Interface",
+                    "Krumsiek Lab",
                     tags$script(HTML("var header = $('.navbar > .container-fluid');header.append('<div style=\"float:right\"><a href=\"https://github.com/krumsieklab/maplet\"><img src=\"github.png\" alt=\"github\" style=\"float:right;width:33px;height:40px;padding-top:10px;\"> </a></div>');console.log(header)")),
                     br(),
                     tags$script(HTML("var header = $('.navbar > .container-fluid');header.append('<div style=\"float:right\"><a href=\"https://weill.cornell.edu\"><img src=\"WCM.png\" alt=\"logo\" style=\"float:right;height:50px;margin-top: 6px; padding-right:10px; \"> </a></div>');console.log(header)")),
@@ -472,9 +473,9 @@ ui <- fluidPage(
                                       HTML("<b>Module 1</b> enables users to extract all the result objects one at a time."
                                       )),
                                   tags$p(
-                                      HTML("Users can assess results in a drop-down menu that offers a list of a stat_name and a plot type (e.g. “missingness”, “pval”)."
+                                      HTML("<b>Insturction:<br></b>Users can assess results in a plot/table with a drop-down menu that offers a list of a stat_name and a plot type (e.g. “missingness”, “pval”). <br>Outputs are delayed untill users click 'UPDATE' button after selection."
                                       )),
-                                  br(),   
+                                  br(), 
                                   # select plot type or stats table
                                   radioButtons("mod1_radio", "Select output type:",
                                                choices = list("Plot" = "plots", 
@@ -488,10 +489,10 @@ ui <- fluidPage(
                                   # define one UI object to select output type
                                   uiOutput("mod1_select_object_ui"),
                                   br(),
-                                  tags$p(
-                                      HTML("<b>Insturction:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection."
-                                      )),
-                                  br(),
+                                  # tags$p(
+                                  #   HTML("<b>Hint:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection."
+                                  #   )),
+                                  # br(),
                                   # delay the output
                                   actionButton("mod1_go", "Update")
                      ), 
@@ -514,27 +515,29 @@ ui <- fluidPage(
                                   # sidebar autoscroll with main panel
                                   style = "margin-left: -25px; margin-top: 45px; margin-bottom: 5px; position:fixed; width: 20%; height: 100%;",
                                   tags$p(
-                                      HTML("<b>Module 3</b> enables to generate an interactive 2D projection of PCA/UMAP. Different interfaces are availabe based on the choice of PCA/UMAP."
+                                      HTML("<b>Module 3</b> enables an interactive 2D projection of PCA/UMAP. Different interfaces are available based on the choice of PCA/UMAP."
                                       )),
                                   tags$p(
-                                      HTML("A drop-down menu of all colData columns supports plot coloring. An additional option for users to consider if the categorial coloring is needed."
+                                      HTML("<b>Insturction:<br></b>Users can select the data type for PCA and the number of neighbors for UMAP. A drop-down menu of all colData columns supports plot coloring. An additional option for users to consider if the categorial coloring is needed.
+                                   <br>Outputs are delayed untill users click 'UPDATE' button after selection."
                                       )),
+                                  br(),
                                   # select one plot type
                                   radioButtons("mod3_select_plot", "Select one plot type:", 
                                                choices = list("PCA" = "pca", 
                                                               "UMAP" = "umap")
                                   ),
-                                  br(),   
+                                  br(), 
                                   # function argument
                                   uiOutput("mod3_plot_argument"),
                                   br(),
                                   # select coloring colData and factor it
                                   uiOutput("mod3_color_ui"),
                                   br(),
-                                  tags$p(
-                                      HTML("<b>Instruction:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection."
-                                      )),
-                                  br(),
+                                  # tags$p(
+                                  #   HTML("<b>Hint:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection."
+                                  #   )),
+                                  # br(),
                                   # delay the output
                                   actionButton("mod3_go", "Update")
                      ), 
