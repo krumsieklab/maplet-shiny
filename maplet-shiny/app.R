@@ -1068,7 +1068,7 @@ server <- function(input, output) {
         }
     )
     
-    # Define rendering logic of control widgets in Module-Annotations Explorer(coded as mod3) ------------------------
+    # Define rendering logic of control widgets in Module-2D projection(coded as mod3) ------------------------
     output$mod3_pca_data <- renderUI({
         if(input$mod3_select_plot=="pca"){
             selectInput("mod3_pca_data_type", "Select data type for PCA:",
@@ -1183,7 +1183,7 @@ server <- function(input, output) {
                                           input$mod3_umap_n_neighbors)}
     )
     
-    # Define rendering logic of outputs in Module-Annotations Explorer(coded as mod3) --------------------------------
+    # Define rendering logic of outputs in Module-2D projection(coded as mod3) --------------------------------
     
     # render pca/umap of mod3
     output$mod3_plot <- renderPlotly({
