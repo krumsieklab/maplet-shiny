@@ -328,7 +328,7 @@ ui <- fluidPage(
                                   uiOutput("mod1_select_object_ui"),
                                   br(),   
                                   tags$p(
-                                      HTML("<b>Hint:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection. Some plots such as box plot or multiple plots may cost dozens of seconds to show up."
+                                      HTML("<b>Hint:<br></b>Outputs are delayed untill you click 'UPDATE' button after selection. Some plots such as box plot or multiple plots may take dozens of seconds to show up."
                                       )),
                                   # delay the output
                                   actionButton("mod1_go", "Update")
