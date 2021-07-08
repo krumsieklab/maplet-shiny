@@ -1,5 +1,7 @@
 ## What is maplet-Shiny?
 
+This is a R Shiny-based, interactive interface prototype for maplet, an extensive R toolbox for modular and reproducible statistical pipelines for omics data analysis. Shiny is a powerful R package that enables the developers to build elegant interactive web applications. Our maplet interface is constituted by six modules with a variety of functionalities, including data uploading, exploration and visualization. The application is based on the SummarizedExperiment data structure created by maplet pipelines. The concise and user-friendly page design facilitates exploratory analysis, statistical analysis, result reporting, and visualization for researchers. In addition, the interface allows the user to download all interactive plots and to customize the plot annotations, which efficiently help users to better inspect the data and gain insights into the statistical results. 
+
 
 ### Availability for resources
 
