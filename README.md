@@ -1,6 +1,12 @@
 ## What is maplet-Shiny?
 
 
+### Availability for resources
+
+- **The user guide and develop guide**:
+
+- **Poster**:
+
 ## How to start maplet-Shiny?
 
 - **Step One**: Download the project from github including app.R, help_functions.R and www(logo & CSS file)
