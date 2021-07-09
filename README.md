@@ -4,7 +4,7 @@ This is a R Shiny-based, interactive interface prototype for maplet, an extensiv
 
 ## How to start maplet-Shiny?
 
-- **Step One**: Download the project from github including app.R, help_functions.R and www(logo & CSS file)
+- **Step One**: Download the project from github including app.R, help_functions.R and www (logo & CSS file)
 
 - **Step Two**: Make sure your interested SE object with analysis pipeline stored in metadata be located in the same local repository with app.R.
 
@@ -16,18 +16,18 @@ This is a R Shiny-based, interactive interface prototype for maplet, an extensiv
 
 The data flow of maplet-Shiny is **data uploading** -> **data exploration** -> **data visulization**. The first module is for data uploading where you can start with an excel of raw data, input parameters to run a pipeline and investigate the log text. The second module is for exploring the annotations of features and samples. The last four modules are to visualize the plots & stat tables stored in the metadata of SE object either by printing them exactly the same way as they are or by re-creating them in an interactive way before downloading the new plots.
 
-- Real-Time Pipeline Module: starts with original data, creates a pipeline and download it to local.
+- **Real-Time Pipeline Module**: starts with original data, creates a pipeline and download it to local.
 
-- Annotations Explorer Module: creates tables, distribution plots, or other graphics to explore the SE object.
+- **Annotations Explorer Module**: creates tables, distribution plots, or other graphics to explore the SE object.
 
-- 2D Projection Module: generates an interactive 2D projection of PCA/UMAP.
+- **2D Projection Module**: generates an interactive 2D projection of PCA/UMAP.
 
-- All Results Explorer Module: extracts all the result objects one at a time.
+- **All Results Explorer Module**: extracts all the result objects one at a time.
 
-- Feature Results Explorer Module: collects all statistical results in a table given one metabolite name. When clicking on one row, it should display interactive plots following
+- **Feature Results Explorer Module**: collects all statistical results in a table given one metabolite name. When clicking on one row, it should display interactive plots following
 the order of StatsBar plot -> Equalizer/Volcano plot -> Box/Scatter plot.
 
-- Pathway Results Explorer Module: displays a series of interactive plots at different granularities given a SE and a statname following the order of StatsBar plot -> Equalizer/Volcano plot -> Box/Scatter plot.
+- **Pathway Results Explorer Module**: displays a series of interactive plots at different granularities given a SE and a statname following the order of StatsBar plot -> Equalizer/Volcano plot -> Box/Scatter plot.
 
 ## Contributors
 
