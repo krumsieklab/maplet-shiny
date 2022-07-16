@@ -147,3 +147,13 @@ D %<>%
                              group_col = "SUB_PATHWAY",
                              color_col = "SUPER_PATHWAY") %>%
   {.}
+
+
+
+# store object into file
+save(D, file="SE.Rdata")
+
+
+
+
+

@@ -12,7 +12,7 @@ This paper presents the user guide and developer guide for a R Shiny-based, inte
 
 - **Step One**: Download the project from github including app.R, help_functions.R and www (logo & CSS file)
 
-- **Step Two**: Make sure your interested SE object with analysis pipeline stored in metadata be located in the same local repository with app.R.
+- **Step Two**: Make sure a file called `SE.Rdata` with a maplet SE object `D` containing an executed analysis pipeline is stored in the same local directory as the main `app.R`. (note: You can generate a file based on simulated data by executing `code_for_SE.R`)
 
 - **Step Three**: Click the '.Rproj' file to open this project and then open the 'app.R' file. In the up-right corner of the source panel of 'app.R', click the 'Run App' to run this Shiny application.
 
